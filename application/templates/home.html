@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+* {
+	 box-sizing: border-box;
+}
+ .intro {
+	 width: 100vw;
+	 height: 100vh;
+	 background-color: #0e0e0e;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 overflow: hidden;
+	 font-size: 1rem;
+}
+ .intro__text {
+	 color: white;
+	 font-family: 'Poppins', sans-serif;
+	 font-weight: 500;
+	 font-size: 10em;
+	 text-transform: uppercase;
+	 opacity: 0;
+	 letter-spacing: 1em;
+	 margin-right: -1em;
+	 transition: all 1s ease;
+}
+ .intro__text.start {
+	 opacity: 1;
+	 letter-spacing: 0;
+	 margin-right: 0;
+}
+a{
+	color:	#8f0;
+	text-decoration: none;
+}
+ .intro__btn {
+	 cursor: pointer;
+	 background: transparent;
+	 color: #8f0;
+	 outline: none;
+	 border: #8f0 solid 2px;
+	 border-radius: 5px;
+	 font-size: 1em;
+	 text-transform: uppercase;
+	 padding: 0.5em 1em;
+	 opacity: 0;
+	 transform: translatey(-100%);
+	 transition: all 1s ease 1s, background 500ms ease;
+}
+ .intro__btn:hover {
+	 background: rgba(136, 255, 0, 0.15);
+}
+ .intro__btn:focus {
+	 outline: none;
+}
+ .intro__btn.start {
+	 opacity: 1;
+	 transform: translatey(0);
+}
+</style>
+</head>
+
+<section class="intro">
+  <div class="intro__text">Collect</div>
+  <button class="intro__btn" type="button"><a href="mailto: anubhavnatani99@gmail.com">Contact Us</button></a>
+</section>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+  const introText = document.getElementsByClassName('intro__text'),
+  introBtn = document.getElementsByClassName('intro__btn');
+  
+  
+  setTimeout(()=> {
+    introText[0].classList.add('start');
+    introBtn[0].classList.add('start');
+  }, 800);
+});
+ </script>
