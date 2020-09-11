@@ -34,55 +34,55 @@ Make sure you have [Docker](https://docs.docker.com/installation/).
   
   ## APIs
    1. **API to baseline upload CSV file**
-   
-   `http://localhost:8000/baselineUpload`  
+   `http://localhost:8000/baselineUpload` 
+ 
    Method: POST  
    Server receives file with key as `file`  
    This API uses threading event in python to upload the file. If it is completed successfully the data is stored in the database otherwise you can stop, pause or resume the task.
    >There is a sample csv file in sampleData named MOCK_FORM_DATA csv file should be formatted like this.
    
    2. **API to create teams from CSV file**
-  
    `http://localhost:8000/createTeams`  
+
    Method: POST  
    Server receives file with key as `file`  
    This API uses threading event in python to upload the file. If it is completed successfully the data is stored in the database otherwise you can stop, pause or resume the task.
    >There is a sample csv file in sampleData named MOCK_TEAM_DATA csv file should be formatted like this.
    
    
-  2. **API to Export Dummy Data**
-   
-   `http://localhost:8000/export`  
+  2. **API to Export Data**
+   `http://localhost:8000/export`
+  
    Method: GET  
    This API starts also uses python threading event and get the data from the database and we can stop, pause and resume the samme task.
    
  
   3. **API to Stop a Task**
-   
-   `http://localhost:8000/stop`    
+   `http://localhost:8000/stop`  
+  
     This is will stop the current long running task
 
   4. **API to pause a Task**
-  
-    `http://localhost:8000/pause`    
+    `http://localhost:8000/pause`
+
     This is will pause the current long running task
 
   5. **API to resume a Task**
-  
-    `http://localhost:8000/resume`    
+    `http://localhost:8000/resume` 
+   
     This is will resume the current long running task
   
   6. **API to clear data from database**
-  
-    `http://localhost:8000/clearDatabase`    
+    `http://localhost:8000/clearDatabase` 
+
     This is will clear data from both database 
 
  7. **API to get ths status of a Task**
- 
-    `http://localhost:8000/status`    
+    `http://localhost:8000/status` 
+   
     This is will get the status of current long running task
 
  8. **API to get all the teams**
- 
-    `http://localhost:8000/getTeams`    
+    `http://localhost:8000/getTeams` 
+   
     This is will get all the teams in the database
