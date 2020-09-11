@@ -84,7 +84,7 @@ def create_teams():
                     break
                 if count>0:
                     line = line.decode('UTF-8')
-                    print(line)
+                    #print(line)
                     team = line.split(",")
                     new_team = Team(t_id = team[0],name=team[1],number=team[2])
                     db.session.add(new_team)
@@ -185,7 +185,7 @@ def upload_file():
             flag = 1
             STATUS = STATUSES[1]
             print("Uplaoding file...")
-            print(filepath)
+            #print(filepath)
             if not os.path.exists(app.config['UPLOAD_PATH']):
                 os.makedirs(app.config['UPLOAD_PATH'])
             with open(filepath, 'wb') as newfile:
@@ -194,7 +194,7 @@ def upload_file():
                     if STATUS == STATUSES[3]:
                         flag = 0
                         break
-                    print(line, sep='')
+                    #print(line, sep='')
                     newfile.write(line)
             if flag == 0:
                 STATUS = STATUSES[3]
