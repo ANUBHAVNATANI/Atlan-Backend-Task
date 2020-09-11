@@ -42,7 +42,6 @@ Make sure you have [Docker](https://docs.docker.com/installation/).
    >There is a sample csv file in sampleData named MOCK_FORM_DATA csv file should be formatted like this.
    
    2. **API to create teams from CSV file**
-   
   
    `http://localhost:8000/createTeams`  
    Method: POST  
@@ -64,21 +63,26 @@ Make sure you have [Docker](https://docs.docker.com/installation/).
     This is will stop the current long running task
 
   4. **API to pause a Task**
+  
     `http://localhost:8000/pause`    
     This is will pause the current long running task
 
   5. **API to resume a Task**
+  
     `http://localhost:8000/resume`    
     This is will resume the current long running task
   
-  6. **API to resume a Task**
+  6. **API to clear data from database**
+  
     `http://localhost:8000/clearDatabase`    
     This is will clear data from both database 
 
- 7. **API to resume a Task**
+ 7. **API to get ths status of a Task**
+ 
     `http://localhost:8000/status`    
     This is will get the status of current long running task
 
- 8. **API to resume a Task**
+ 8. **API to get all the teams**
+ 
     `http://localhost:8000/getTeams`    
     This is will get all the teams in the database
