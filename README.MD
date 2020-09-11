@@ -29,7 +29,7 @@ Make sure you have [Docker](https://docs.docker.com/installation/).
   2. Move to project folder
   `cd Atlan-Backend-Task`
   3. Run `docker build --tag collect:1.0 .` and wait for Docker to build the image.
-  4. docker run --publish 8000:8000 --detach --name bb collect:1.0
+  4. Run `docker run --publish 8000:8000 --detach --name bb collect:1.0`
   5. Open `http://localhost:8000/` in your browser to open the app
   
   ## APIs
